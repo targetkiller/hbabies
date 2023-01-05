@@ -19,7 +19,7 @@ create table user (
 
 create table permission (
     `id` int(11) AUTO_INCREMENT PRIMARY KEY,
-    `name` int(11)  COMMENT '权限名称',
+    `name` varchar(64) NOT NULL  COMMENT '权限名称',
     `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
     `update_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
    UNIQUE KEY `idx_name` (`name`) 
